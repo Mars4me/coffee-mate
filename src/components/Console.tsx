@@ -1,5 +1,6 @@
 import React, { ReactNode, useState } from 'react';
 import styled from 'styled-components';
+import { Theme } from '../main';
 import { Flex } from './Flex';
 import { Line } from './Line';
 
@@ -15,9 +16,17 @@ const StyledConsole = styled.textarea`
     font-size: 24px;
     border: none;
     resize: none;
-    color: ${({ color }) => color || 'white'};
+    color: ${({ color, theme }) => color || theme.colors.primary};
     &:focus {
         outline: none;
+    }
+
+    @media ${(props) => props.theme.media.phone} {
+        border: 1px solid red;
+    }
+
+    @media ${({ theme }: { theme: Theme }) => theme.media.tablet} {
+        border: 1px solid green;
     }
 `;
 

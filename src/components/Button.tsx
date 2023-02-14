@@ -37,14 +37,14 @@ const StyledButton = styled.button.attrs((props) => ({
     ${(props) =>
         props.primary &&
         css<Pick<ButtonProps, 'color' | 'background'>>`
-            color: ${(props) => props.color || 'white'};
-            background: ${(props) => props.background || 'white'};
+            color: ${(props) => props.color || props.theme.colors.primary};
+            background: ${(props) => props.background || props.theme.colors.primary};
         `}
     ${(props) =>
         props.outlined &&
         css<Pick<ButtonProps, 'color'>>`
-            color: ${(props) => props.color || 'white'};
-            border: 1px solid ${(props) => props.color || 'white'};
+            color: ${(props) => props.color || props.theme.colors.primary};
+            border: 1px solid ${(props) => props.color || props.theme.colors.primary};
             background: transparent;
         `}
 `;

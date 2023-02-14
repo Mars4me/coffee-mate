@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client';
 import App from './App';
 // import './index.css';
-import styled, { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 const Global = createGlobalStyle`
 * {
@@ -12,9 +12,22 @@ const Global = createGlobalStyle`
 }
 `;
 
+const theme = {
+    colors: {
+        primary: 'green',
+        secondary: 'red',
+    },
+    media: {
+        phone: '(max-width: 425px)',
+        tablet: '(max-width: 768px) and (min-width: 425px)',
+    },
+};
+
+export type Theme = typeof theme;
+
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-    <>
+    <ThemeProvider theme={theme}>
         <Global />
         <App />
-    </>
+    </ThemeProvider>
 );
