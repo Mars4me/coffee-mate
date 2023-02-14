@@ -17,8 +17,12 @@ function App() {
             <Flex content={'center'}>
                 <Title color="green">Test styledcomponents Whoop Whoop</Title>
             </Flex>
-            <Console />
-            <Button>Send</Button>
+            <Flex direction="column">
+                <Console />
+                <Button color="green " align="flex-end">
+                    Send
+                </Button>
+            </Flex>
         </AppWrapper>
     );
 }
