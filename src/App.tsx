@@ -1,5 +1,6 @@
-import { useState } from 'react';
 import styled from 'styled-components';
+import { Button } from './components/Button';
+import { Console } from './components/Console';
 import { Flex } from './components/Flex';
 import { Title } from './components/Title';
 
@@ -11,13 +12,13 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
-    const [count, setCount] = useState(0);
-
     return (
         <AppWrapper>
             <Flex content={'center'}>
                 <Title color="green">Test styledcomponents Whoop Whoop</Title>
             </Flex>
+            <Console />
+            <Button>Send</Button>
         </AppWrapper>
     );
 }
