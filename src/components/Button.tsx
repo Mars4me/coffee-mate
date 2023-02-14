@@ -12,5 +12,5 @@ const StyledButton = styled.button`
 `;
 
 export const Button = (props: { children?: ReactNode }) => {
-    return <StyledButton />;
+    return <StyledButton {...props} />;
 };
