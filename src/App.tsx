@@ -18,7 +18,7 @@ function App() {
                 <Title color="green">Test styledcomponents Whoop Whoop</Title>
             </Flex>
             <Flex direction="column">
-                <Console />
+                <Console color="green" />
                 <Button color="green " align="flex-end">
                     Send
                 </Button>
